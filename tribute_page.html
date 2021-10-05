@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+            word-spacing: 2px;
+            line-height: 30px;
+            margin: 0;
+        }
+        #main{
+            background: whitesmoke;
+            width: 80%; height: auto;
+            margin: 20px auto;
+            padding-left: 100px;padding-right: 100px;
+            top: 0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            border-radius: 15px;
+            box-shadow: 5px 10px 5px 5px #242323;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            text-align: center;
+        }
+        #header{
+            grid-row: 1/2;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            max-width: 800px;
+            margin: auto;
+        }
+        #ai-info{ 
+            margin-top: 50px;
+        }
+        #footer{
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+            grid-row: 3/4;
+            
+        }
+        #tribute-info{
+            margin: 0 auto 0 auto;
+            max-width: 900px;
+            text-align: justify;
+            grid-row: 2/3;
+        }
+        #image{
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 0 auto;
+            max-width: 625px;
+        }
+        #tribute-link{
+            text-decoration: none;
+        }
+        a{
+            color: darkblue;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <main id="main">
+        <header id="header">
+            <h1 id="title">Artificial Intelligence</h1>
+            <p style="font-size: 14px;">A superintelligence, hyperintelligence, or superhuman intelligence is a hypothetical agent 
+                that would possess intelligence far surpassing that of the brightest and most gifted human mind.</p>
+        </header>
+        <section id="tribute-info">
+            <figure id="img-div">
+                <img src="https://hbr.org/resources/images/article_assets/2020/03/BR2003_SYN_CARLSON.png" 
+                alt="AI" id="image">
+                <figcaption id="img-caption" style="text-align: center;font-size: 14px;">Artificial intelligence (AI)</figcaption>
+            </figure>
+            <ul id="ai-info">
+                <li>Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to 
+                    the natural intelligence displayed by humans or animals. Leading AI textbooks define 
+                    the field as the study of "intelligent agents": any system that perceives its environment 
+                    and takes actions that maximize its chance of achieving its goals. Some popular 
+                    accounts use the term "artificial intelligence" to describe machines that mimic "cognitive" 
+                    functions that humans associate with the human mind, such as "learning" and "problem solving", 
+                    however this definition is rejected by major AI researchers.</li>
+                <li>AI applications include advanced web search engines (i.e. Google), recommendation systems 
+                    (used by YouTube, Amazon and Netflix), understanding human speech (such as Siri or Alexa), 
+                    self-driving cars (e.g. Tesla), and competing at the highest level in strategic game systems 
+                    (such as chess and Go). As machines become increasingly capable, tasks considered to require 
+                    "intelligence" are often removed from the definition of AI, a phenomenon known as the AI effect. 
+                    For instance, optical character recognition is frequently excluded from things considered to be AI, 
+                    having become a routine technology</li>
+                <li>Artificial intelligence was founded as an academic discipline in 1956, and in the years since 
+                    has experienced several waves of optimism, followed by disappointment and the loss of 
+                    funding (known as an "AI winter"), followed by new approaches, success and renewed funding. 
+                    AI research has tried and discarded many different approaches during its lifetime, including simulating 
+                    the brain, modeling human problem solving, formal logic, large databases of knowledge and imitating 
+                    animal behavior. In the first decades of the 21st century, highly mathematical statistical machine 
+                    learning has dominated the field, and this technique has proved highly successful, helping to solve 
+                    many challenging problems throughout industry and academia.</li>
+                <li>The various sub-fields of AI research are centered around particular goals and the use of particular tools. 
+                    The traditional goals of AI research include reasoning, knowledge representation, planning, learning, natural 
+                    language processing, perception and the ability to move and manipulate objects. General intelligence (the 
+                    ability to solve an arbitrary problem) is among the field's long-term goals. To solve these problems, AI 
+                    researchers use versions of search and mathematical optimization, formal logic, artificial neural networks, 
+                    and methods based on statistics, probability and economics. AI also draws upon computer science, psychology, 
+                    linguistics, philosophy, and many other fields.</li>
+                <li>The field was founded on the assumption that human intelligence "can be so precisely described 
+                    that a machine can be made to simulate it". This raises philosophical arguments about the mind and 
+                    the ethics of creating artificial beings endowed with human-like intelligence. These issues have been 
+                    explored by myth, fiction and philosophy since antiquity. Science fiction and futurology have 
+                    also suggested that, with its enormous potential and power, AI may become an existential risk to humanity.</li>
+            </ul>
+        </section>
+        <footer id="footer">
+            <h3>Read more about Artificial Intelligence at <a id="tribute-link" href="https://en.wikipedia.org/wiki/Artificial_intelligence#History" target="_blank">Wikipedia</a></h3>
+        </footer>
+    </main>
+</body>
+</html>
