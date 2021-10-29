@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo sát ý kiến khách hàng</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        body{
+            color:honeydew;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        body::before{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-image: linear-gradient(115deg,rgba(51, 51, 51, 0.8),rgba(15, 15, 17, 0.7))
+            ,url(https://ak.picdn.net/shutterstock/videos/10713152/thumb/1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container{
+            width: 100%;
+            margin: 3.125rem auto 0 auto;
+        }
+        @media (min-width:576px){
+            .container{
+                max-width: 540px;
+            }
+        }
+        @media (min-width: 768px) {
+            .container{
+                max-width: 720px;
+            }
+        }
+        #header{
+            width: 100%;
+            height: 15%;
+            order: 1;
+        }
+        h1{
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        h1,p{
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        label{
+            display: flex;
+            align-items: center;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+        input,
+        button,
+        select,
+        textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        button {
+            border: none;
+        }
+        .description{
+            font-style: italic;
+            font-weight: 200;
+            text-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.4);
+        }
+        .clue{
+            margin-left: 0.25rem;
+            font-size: 0.9rem;  
+        }
+        form{
+            padding: 2.5rem 0.625rem;
+            border-radius: 0.25rem;
+        }
+        @media(min-width:480px){
+            form{
+                padding: 2.5rem;
+            }
+        }
+        #survey-form{
+            width: 100%;
+            height: 85%;
+            order: 2;
+            background:rgba(51, 51, 51, 0.9);
+        }
+        .text-center{
+            text-align: center;
+        }
+        .form-group{
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
+        }
+        .form-control{
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+        .form-control:focus {
+            outline: 0;
+            box-shadow: 0 0 0.25rem 0.3rem rgba(0, 0, 0, 0.5 );
+        }
+        .input-radio,
+        .input-checkbox {
+            display: inline-block;
+            margin-right: 0.625rem;
+            min-height: 1.25rem;
+            min-width: 1.25rem;
+            color: rgba(51, 51, 51, 0.8);
+        }
+
+        .input-textarea {
+            min-height: 120px;
+            width: 100%;
+            padding: 0.625rem;
+            resize: vertical;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: inherit;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .submit-button:hover{
+            animation-name: buthover;
+            animation-duration: 0.3s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes buthover{
+            0%{
+                background: rgba(0, 0, 0, 0.5);
+            }
+            100%{
+                background: rgba(0, 0, 0, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header" class="text-center">
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description" style="font-style: italic;">Thank you for taking the time to help us improve the platform</p>
+        </div>
+        <form action="#" id="survey-form" method="POST">
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="age" id="number-label">Age <span class="clue">(optional)</span></label>
+                <input type="number" class="form-control" id="age" placeholder="Age" required min="18" max="100" pattern="{0-9}">
+            </div>
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled selected>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <label><input type="radio" name="user-rcm" value="definitely" class="input-radio" checked>Definitely</label>
+                <label><input type="radio" name="user-rcm" value="maybe" class="input-radio">Maybe</label>
+                <label><input type="radio" name="user-rcm" value="not sure" class="input-radio">Not sure</label>
+            </div>
+            <div class="form-group">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select name="fav" id="fav-feature" class="form-control">
+                    <option disabled selected>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open source">Open source</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What would you like to see improved? <span class="clue">(Check all that apply)</span></p>
+                <label ><input type="checkbox" name="prefer" value="front-end projects" class="input-checkbox">Front-end Projects</label>
+                <label ><input type="checkbox" name="prefer" value="Back-end Projects" class="input-checkbox">Back-end Projects</label>
+                <label ><input type="checkbox" name="prefer" value="Data Visualization" class="input-checkbox">Data Visualization</label>
+                <label ><input type="checkbox" name="prefer" value="Challenges" class="input-checkbox">Challenges</label>
+                <label ><input type="checkbox" name="prefer" value="Open Source Community" class="input-checkbox">Open Source Community</label>
+                <label ><input type="checkbox" name="prefer" value="Gitter help rooms" class="input-checkbox">Gitter help rooms</label>
+                <label ><input type="checkbox" name="prefer" value="Videos" class="input-checkbox">Videos</label>
+                <label ><input type="checkbox" name="prefer" value="City Meetups" class="input-checkbox">City Meetups</label>
+                <label ><input type="checkbox" name="prefer" value="Wiki" class="input-checkbox">Wiki</label>
+                <label ><input type="checkbox" name="prefer" value="Forum" class="input-checkbox">Forum</label>
+                <label ><input type="checkbox" name="prefer" value="Additional Courses" class="input-checkbox">Additional Courses</label>
+            </div>
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea name="input-textarea" id="input-textarea" class="input-textarea" placeholder="Enter your comment here..." cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
